@@ -62,7 +62,7 @@ File `platform.sql` di folder `db_schema/` berisi dump database `Platform`, terd
 
 ## Screenshot
 
-Berada dalam folder `screenshots/`:
+Berada dalam folder `Screenshots/`:
 
 - `1.png` hingga `8.png` — Menampilkan tahapan penggunaan aplikasi (login, tampilan kegiatan, tambah/hapus kegiatan, dsb).
 
