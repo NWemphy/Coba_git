@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>225314043 - UTS Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+    }
+
+    .nav-tabs .nav-link {
+      color: #495057;
+      font-weight: 500;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #4c6ef5;
+      color: white;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .nav-tabs .nav-link:hover {
+      color: #4c6ef5;
+    }
+
+    .tab-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .jumbotron {
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #74c0fc, #d0ebff);
+      border-radius: 1rem;
+      color: #0b2e59;
+    }
+
+    h2 {
+      color: #364fc7;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    .form-control, .btn {
+      border-radius: 10px;
+    }
+
+    .btn-primary {
+      background-color: #4263eb;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #364fc7;
+    }
+
+    .btn-success {
+      background-color: #40c057;
+      border: none;
+    }
+
+    .btn-warning {
+      background-color: #fab005;
+      border: none;
+    }
+
+    .alert-info {
+      background-color: #e3fafc;
+      color: #0c8599;
+      border-left: 5px solid #0b7285;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Nav Tabs -->
+<ul class="nav nav-tabs justify-content-center mt-3" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="beranda-tab" data-bs-toggle="tab" data-bs-target="#beranda" type="button" role="tab">Beranda</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="tentang-tab" data-bs-toggle="tab" data-bs-target="#tentang" type="button" role="tab">Tentang</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="kisahku-tab" data-bs-toggle="tab" data-bs-target="#kisahku" type="button" role="tab">Kisahku</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pendidikan-tab" data-bs-toggle="tab" data-bs-target="#pendidikan" type="button" role="tab">Pendidikan</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="tugas-tab" data-bs-toggle="tab" data-bs-target="#tugas" type="button" role="tab">Tugas</button>
+  </li>
+</ul>
+
+<!-- Tab Content -->
+<div class="tab-content p-4" id="myTabContent">
+
+  <!-- BERANDA -->
+  <div class="tab-pane fade show active" id="beranda" role="tabpanel">
+    <div class="jumbotron text-center">
+      <img src="Norbert_Keraf.JPEG" alt="Foto Profil" class="img-thumbnail rounded-circle mb-3" width="150" />
+      <h1>Norbertus Wempy Junior Keraf</h1>
+      <p>NIM: 225314043</p>
+    </div>
+  </div>
+
+  <!-- TENTANG -->
+  <div class="tab-pane fade" id="tentang" role="tabpanel">
+    <h2 class="text-center">Tentang Saya</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Saya adalah mahasiswa Informatika yang senang belajar hal baru, terutama di bidang teknologi dan desain. Saya yakin bahwa segala sesuatu bisa dicapai dengan kerja keras, dan setiap tantangan adalah peluang untuk tumbuh.</p>
+      </div>
+      <div class="col-md-6">
+        <p>Selain kuliah, saya juga aktif dalam komunitas, hobi bermain game (terkhusus mobile legends), membaca buku buku novel filsafat dan mengeksplorasi tempat-tempat baru bersama teman-teman.</p>
+      </div>
+    </div>
+  </div>
+
+ <!-- KISAHKU -->
+<div class="tab-pane fade" id="kisahku" role="tabpanel">
+  <h2 class="text-center">My Gallery of Memories</h2>
+  <p class="text-center text-muted mb-4">Kenangan akan abadi dalam sebuah gambar yang tercipta</p>
+  <div class="row g-4">
+
+    <!-- Foto 1 dalam bentuk card -->
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="IMG_0105.jpg" class="card-img-top" alt="Foto 1">
+        <div class="card-body">
+          <p class="card-text">Nyantui di Caffe Sangmane "Caffe ala ala Katolik Meksiko"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foto 2 dalam bentuk card  -->
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="Keluarga.jpg" class="card-img-top" alt="Foto 2">
+        <div class="card-body">
+          <p class="card-text">Bersama keluarga ketika berlibur ke Ketep Pass, Magelang</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Foto 3 dalam bentuk card -->
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="Frater.jpg" class="card-img-top" alt="Foto 3">
+        <div class="card-body">
+          <p class="card-text">Kenangan membiara di tahun 2021 - 2022, Lokasi Pematang Siantar</p>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+
+
+  <!-- PENDIDIKAN -->
+  <div class="tab-pane fade" id="pendidikan" role="tabpanel">
+    <h2 class="text-center">Riwayat Pendidikan</h2>
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Tahun</th>
+          <th>Nama Sekolah</th>
+          <th>Alamat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2006-2008</td><td>TKK St. Bernadeth</td><td>Tanjung Pinang - Kepri</td></tr>
+        <tr><td>2008-2014</td><td>SD Katolik</td><td>Tanjung Pinang - Kepri</td></tr>
+        <tr><td>2014-2017</td><td>SMP Katolik</td><td>Tanjung Pinang - Kepri</td></tr>
+        <tr><td>2017-2021</td><td>SMA Seminari San Dominggo</td><td>Hokeng - Flores Timur</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TUGAS -->
+  <div class="tab-pane fade" id="tugas" role="tabpanel">
+    <h2 class="text-center">Tugas Js</h2>
+    <form id="formTugas">
+      <div class="mb-3">
+        <label for="namaDepan" class="form-label">Nama Depan</label>
+        <input type="text" class="form-control" id="namaDepan" required />
+      </div>
+      <div class="mb-3">
+        <label for="namaBelakang" class="form-label">Nama Belakang</label>
+        <input type="text" class="form-control" id="namaBelakang" required />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required />
+      </div>
+      <div class="mb-3">
+        <label for="jumlahHobi" class="form-label">Jumlah Pilihan Hobi</label>
+        <input type="number" class="form-control" id="jumlahHobi" min="1" max="10" required />
+      </div>
+      <button type="button" class="btn btn-primary" onclick="tampilkanInputHobi()">Oke</button>
+    </form>
+    <div id="inputHobiContainer" class="mt-3"></div>
+    <div id="checkboxHobiContainer" class="mt-3"></div>
+    <div id="output" class="alert alert-info mt-3 d-none"></div>
+  </div>
+
+</div>
+
+<script>
+  let hobiList = [];
+
+  function tampilkanInputHobi() {
+    const jumlah = parseInt(document.getElementById("jumlahHobi").value);
+    const container = document.getElementById("inputHobiContainer");
+    container.innerHTML = "";
+
+    for (let i = 0; i < jumlah; i++) {
+      container.innerHTML += `
+        <div class="mb-2">
+          <label>Hobi ${i + 1}:</label>
+          <input type="text" class="form-control hobi-input" required />
+        </div>
+      `;
+    }
+
+    container.innerHTML += `<button class="btn btn-success mt-2" onclick="buatCheckboxHobi()">Oke</button>`;
+  }
+
+  function buatCheckboxHobi() {
+    try {
+      const inputs = document.querySelectorAll(".hobi-input");
+      hobiList = Array.from(inputs).map(input => {
+        if (input.value.trim() === "") {
+          throw new Error("Semua hobi harus diisi.");
+        }
+        return input.value;
+      });
+      updateCheckboxHobi();
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  function updateCheckboxHobi() {
+    const container = document.getElementById("checkboxHobiContainer");
+    container.innerHTML = "<p>Pilih hobi yang kamu sukai:</p>";
+
+    hobiList.forEach((hobi, i) => {
+      container.innerHTML += `
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="hobi${i}" value="${hobi}" />
+          <label class="form-check-label" for="hobi${i}">${hobi}</label>
+        </div>
+      `;
+    });
+
+    container.innerHTML += `<button class="btn btn-warning mt-2" onclick="tampilkanHasil()">Oke</button>`;
+  }
+
+  function tampilkanHasil() {
+    try {
+      const namaDepan = document.getElementById("namaDepan").value.trim();
+      const namaBelakang = document.getElementById("namaBelakang").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const jumlah = hobiList.length;
+
+      if (namaDepan === "" || namaBelakang === "" || email === "") {
+        throw new Error("Semua kolom harus diisi.");
+      }
+
+      const pilihan = Array.from(document.querySelectorAll(".form-check-input:checked")).map(cb => cb.value);
+      const output = document.getElementById("output");
+      output.classList.remove("d-none");
+      output.innerHTML = `Hallo, nama saya <strong>${namaDepan} ${namaBelakang}</strong>, dengan email <strong>${email}</strong>, saya mempunyai sejumlah <strong>${jumlah}</strong> pilihan hobi yaitu <strong>${hobiList.join(", ")}</strong>, dan saya menyukai <strong>${pilihan.join(", ")}</strong>.`;
+    } catch (error) {
+      alert(error.message);
+    }
+  }
+
+  // fungsi untuk menangani event keypress
+  document.getElementById("formTugas").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent the default form submission
+      if (event.target.id === "jumlahHobi") {
+        tampilkanInputHobi();
+      } else if (event.target.classList.contains("hobi-input")) {
+        buatCheckboxHobi();
+      } else {
+        tampilkanHasil();
+      }
+    }
+  });
+</script>
+</body>
+</html>

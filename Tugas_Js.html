@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masukan Inputan Pren</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #inputTeks input {
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 15px;
+        }
+
+        #pilihanContainer {
+            margin-top: 20px;
+        }
+
+        .radio-option {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Masukkan Data</h2>
+        <!-- Input untuk nama -->
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" placeholder="Masukkan nama">
+
+        <!-- Input untuk jumlah pilihan -->
+        <label for="jumlah">Jumlah Pilihan:</label>
+        <input type="number" id="jumlah" placeholder="Masukkan jumlah">
+
+        <!-- Tombol untuk submit jumlah pilihan -->
+        <button onclick="generateInputs()" id="submitButton">Submit</button>
+
+        <!-- Tempat untuk menampilkan input pilihan -->
+        <div id="inputTeks"></div>
+
+        <!-- Tombol OK untuk menampilkan radio button -->
+        <button onclick="tampilkanData()" style="display: none;" id="okButton">OK</button>
+
+        <!-- Pesan error -->
+        <p class="error" id="errorMsg"></p>
+
+        <!-- Tempat untuk menampilkan radio button -->
+        <div id="pilihanContainer" style="display: none;"></div>
+
+        <!-- Tombol untuk konfirmasi pilihan radio button -->
+        <button onclick="konfirmasiPilihan()" style="display: none;" id="confirmButton">OK</button>
+
+        <!-- Tempat untuk menampilkan hasil akhir -->
+        <p id="hasil" style="margin-top: 20px;"></p>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan pesan error
+        function showError(message) {
+            document.getElementById("errorMsg").innerText = message;
+        }
+
+        // Fungsi untuk menghapus pesan error
+        function clearError() {
+            document.getElementById("errorMsg").innerText = "";
+        }
+
+        // Fungsi untuk menghasilkan input teks sesuai jumlah yang dimasukkan
+        function generateInputs() {
+            clearError();
+            let nama = document.getElementById("nama").value.trim();
+            let jumlah = parseInt(document.getElementById("jumlah").value);
+            let container = document.getElementById("inputTeks");
+            container.innerHTML = ""; // Mengosongkan container
+
+            // Validasi jika nama kosong
+            if (!nama) {
+                showError("Nama tidak boleh kosong!");
+                return;
+            }
+
+            // Validasi jika jumlah pilihan tidak valid
+            if (isNaN(jumlah) || jumlah <= 0) {
+                showError("Masukkan jumlah yang valid!");
+                return;
+            }
+
+            // Loop untuk membuat input teks sebanyak jumlah yang dimasukkan
+            for (let i = 0; i < jumlah; i++) {
+                let input = document.createElement("input");
+                input.type = "text";
+                input.placeholder = "Masukkan teks tampilan " + (i + 1);
+                input.id = "teks_" + i;
+                container.appendChild(input);
+            }
+
+            // Tampilkan tombol OK dan nonaktifkan input nama dan jumlah
+            document.getElementById("okButton").style.display = "block";
+            document.getElementById("submitButton").disabled = true;
+            document.getElementById("nama").disabled = true;
+            document.getElementById("jumlah").disabled = true;
+        }
+
+        function tampilkanData() {
+            clearError();
+            let nama = document.getElementById("nama").value;
+            let jumlah = parseInt(document.getElementById("jumlah").value);
+            let pilihanContainer = document.getElementById("pilihanContainer");
+            pilihanContainer.innerHTML = "";
+
+            let pilihan = [];
+            for (let i = 0; i < jumlah; i++) {
+                let input = document.getElementById("teks_" + i);
+                if (!input.value.trim()) {
+                    showError(`Input pada pilihan ${i + 1} tidak boleh kosong!`);
+                    return;
+                }
+                pilihan.push(input.value);
+                input.disabled = true;
+            }
+
+            pilihan.forEach(item => {
+                let radioDiv = document.createElement("div");
+                radioDiv.className = "radio-option";
+
+                let radioInput = document.createElement("input");
+                radioInput.type = "radio";
+                radioInput.name = "pilihan";
+                radioInput.value = item;
+
+                let label = document.createElement("label");
+                label.textContent = item;
+
+                radioDiv.appendChild(radioInput);
+                radioDiv.appendChild(label);
+
+                pilihanContainer.appendChild(radioDiv);
+            });
+
+            pilihanContainer.style.display = "block";
+            document.getElementById("confirmButton").style.display = "block";
+            document.getElementById("okButton").disabled = true;
+        }
+
+        function konfirmasiPilihan() {
+            let nama = document.getElementById("nama").value;
+            let radios = document.getElementsByName("pilihan");
+            let pilihanTerpilih = "";
+            for (let radio of radios) {
+                if (radio.checked) {
+                    pilihanTerpilih = radio.value;
+                    break;
+                }
+            }
+
+            if (!pilihanTerpilih) {
+                showError("Harap pilih salah satu opsi!");
+                return;
+            }
+
+            let jumlah = parseInt(document.getElementById("jumlah").value);
+            let pilihanList = [];
+            for (let i = 0; i < jumlah; i++) {
+                let input = document.getElementById("teks_" + i);
+                pilihanList.push(input.value);
+            }
+
+            document.getElementById("hasil").innerText = `Hallo, nama saya ${nama}, saya mempunyai sejumlah ${jumlah} pilihan yaitu ${pilihanList.join(", ")}, dan saya memilih ${pilihanTerpilih}.`;
+        }
+    </script>
+</body>
+
+</html>
