@@ -33,7 +33,7 @@ Kumpulkan/
 ---
 ## Screenshots
 
-Berikut adalah beberapa screenshot dari aplikasi:
+Berikut adalah beberapa Screenshot dari aplikasi:
 
 ![Screenshot 1](Kumpulkan/Screenshot/1.png)
 ![Screenshot 2](Kumpulkan/Screenshot/2.png)
