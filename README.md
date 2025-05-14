@@ -10,14 +10,14 @@ Ini adalah proyek aplikasi to-do list berbasis PHP dan MySQL. Pengguna dapat mel
 
 ```
 Kumpulkan/
-├── php_files/
+├── Php_files/
 │   ├── database.php
 │   ├── kegiatan.php
 │   ├── login.php
 │   └── process.php
-├── db_schema/
+├── Db_schema/
 │   └── platform.sql
-├── screenshots/
+├── Screenshots/
 │   ├── 1.png
 │   ├── 2.png
 │   ├── 3.png
@@ -34,7 +34,7 @@ Kumpulkan/
 
 ## File PHP
 
-Berada dalam folder `php_files/`:
+Berada dalam folder `Php_files/`:
 
 - `database.php` — Koneksi ke database MySQL.
 - `kegiatan.php` — Halaman utama setelah login, menampilkan dan mengelola kegiatan.
@@ -45,7 +45,7 @@ Berada dalam folder `php_files/`:
 
 ## Skema Database
 
-File `platform.sql` di folder `db_schema/` berisi dump database `Platform`, terdiri dari dua tabel:
+File `platform.sql` di folder `Db_schema/` berisi dump database `Platform`, terdiri dari dua tabel:
 
 ### Tabel `User`
 - `id` INT PRIMARY KEY AUTO_INCREMENT
