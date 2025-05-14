@@ -17,7 +17,7 @@ Kumpulkan/
 │   └── process.php
 ├── Db_schema/
 │   └── platform.sql
-├── Screenshots/
+├── Kumpulkkan/Screenshots/
 │   ├── 1.png
 │   ├── 2.png
 │   ├── 3.png
