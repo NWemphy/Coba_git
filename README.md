@@ -35,15 +35,15 @@ Kumpulkan/
 
 Berikut adalah beberapa Screenshot dari aplikasi:
 
-![Screenshot 1](Coba_git/Kumpulkan/Screenshots/1.png)
-![Screenshot 2](Coba_git/Kumpulkan/Screenshots/2.png)
-![Screenshot 3](Coba_git/Kumpulkan/Screenshots/3.png)
-![Screenshot 4](Coba_git/Kumpulkan/Screenshots/4.png)
-![Screenshot 5](Coba_git/Kumpulkan/Screenshots/5.png)
-![Screenshot 6](Coba_git/Kumpulkan/Screenshots/6.png)
-![Screenshot 7](Coba_git/Kumpulkan/Screenshots/7.png)
-![Screenshot 8](Coba_git/Kumpulkan/Screenshots/8.png)
-![Screenshot 9](Coba_git/Kumpulkan/Screenshots/9.png)
+![Screenshot 1](Kumpulkan/Screenshots/1.png)
+![Screenshot 2](Kumpulkan/Screenshots/2.png)
+![Screenshot 3](Kumpulkan/Screenshots/3.png)
+![Screenshot 4](Kumpulkan/Screenshots/4.png)
+![Screenshot 5](Kumpulkan/Screenshots/5.png)
+![Screenshot 6](Kumpulkan/Screenshots/6.png)
+![Screenshot 7](Kumpulkan/Screenshots/7.png)
+![Screenshot 8](Kumpulkan/Screenshots/8.png)
+![Screenshot 9](Kumpulkan/Screenshots/9.png)
 ## File PHP
 
 Berada dalam folder `Php_files/`:
